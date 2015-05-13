@@ -29,24 +29,24 @@ Logger.prototype.setLogLevel = function(levels) {
 
 Logger.prototype.debug = function(msg) {
     if (LEVELS.check(this.levels, LEVELS.DEBUG)) {
-        util.debug(msg);
+        console.error(msg);
     }
 }
 
 Logger.prototype.error = function(msg) {
     if (LEVELS.check(this.levels, LEVELS.ERROR)) {
-        util.error(msg);
+        console.error(msg);
     }
 }
 
 Logger.prototype.info = function(msg) {
     if (LEVELS.check(this.levels, LEVELS.INFO)) {
-        util.print("INFO: " + msg);
+        console.log("INFO: " + msg);
     }
 }
 
 Logger.prototype.warn = function(msg) {
     if (LEVELS.check(this.levels, LEVELS.WARM)) {
-        util.print("WARN: " + msg);
+        console.log("WARN: " + msg);
     }
 }

@@ -17,14 +17,14 @@ out.getClassName = function() {
 }
  
 out.prototype["print"] = function() {
-    util.print.apply(null, arguments);
+    process.stdout.write.apply(process.stdout, arguments);
 };
 
 out.prototype["println"] = function() {
-    util.print.apply(null, arguments);
-    util.print("\n");
+    console.log.apply(null, arguments);
+//    console.log("\n");
 };
 
 out.prototype["format"] = function(fmt, args) {
-    util.print(util.format.apply(null, [fmt].concat(args)));
+    console.log(util.format.apply(null, [fmt].concat(args)));
 }

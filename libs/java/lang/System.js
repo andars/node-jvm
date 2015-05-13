@@ -23,14 +23,14 @@ System["exit"] = function() {
 
 System["out"] = {
     "print": function() {
-        util.print.apply(null, arguments);
+        console.log.apply(null, arguments);
     },
     "println": function() {
-        util.print.apply(null, arguments);
-        util.print("\n");
+        console.log.apply(null, arguments);
+        //console.log("\n");
     },
     "format": function(fmt, args) {
-        util.print(util.format.apply(null, [fmt].concat(args)));
+        console.log(util.format.apply(null, [fmt].concat(args)));
     }
 }
 
